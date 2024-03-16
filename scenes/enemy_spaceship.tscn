@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxdt7f8i0d75u"]
 
-[ext_resource type="Texture2D" uid="uid://vg5uo8q77pnb" path="res://placeholder_arts/test_human_ship.png" id="1_s0qmf"]
+[ext_resource type="Texture2D" uid="uid://vg5uo8q77pnb" path="res://placeholder_arts/test_human_ship.png" id="1_oetrk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5y3ev"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_s0qmf")
+"texture": ExtResource("1_oetrk")
 }],
 "loop": true,
 "name": &"default",

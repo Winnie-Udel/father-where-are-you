@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ma1lt634pvu5"]
 
 [ext_resource type="Texture2D" uid="uid://cdhskfca2eido" path="res://placeholder_arts/test_wanderer_ship.png" id="1_7io41"]
-[ext_resource type="Script" path="res://player.gd" id="1_ewt7k"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_ewt7k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dcwj7"]
 animations = [{
@@ -27,3 +27,7 @@ sprite_frames = SubResource("SpriteFrames_dcwj7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4kpkr")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(50, 0)
+scale = Vector2(1.04389, 4.19792)
