@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ma1lt634pvu5"]
+
+[ext_resource type="Texture2D" uid="uid://cdhskfca2eido" path="res://placeholder_arts/test_wanderer_ship.png" id="1_7io41"]
+[ext_resource type="Script" path="res://player.gd" id="1_ewt7k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcwj7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7io41")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kpkr"]
+radius = 47.2652
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_ewt7k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_dcwj7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4kpkr")
