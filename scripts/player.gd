@@ -9,6 +9,9 @@ signal laser_shot(laser_scene, location)
 var screen_size 
 var laser_scene = preload("res://scenes/laser.tscn")
 
+func _ready():
+	screen_size = get_viewport_rect().size
+	
 func _process(_delta):
 	if Input.is_action_just_pressed("attack"):
 		shoot()
@@ -21,7 +24,12 @@ func _physics_process(delta):
 	else:
 		velocity.y = move_toward(velocity.y, 0, 10)
 		
+	# Prevent character from moving offscreen
+	global_position.x = clamp(global_position.x, 0, screen_size.x)
+	global_position.y = clamp(global_position.y, 0, screen_size.y)
+	
 	move_and_slide()
+	
 
 func shoot():
 	laser_shot.emit(laser_scene, muzzle.global_position)
