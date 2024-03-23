@@ -9,7 +9,7 @@ script = ExtResource("1_kctr5")
 enemy_scenes = Array[PackedScene]([ExtResource("3_rqtmn")])
 
 [node name="Player" parent="." instance=ExtResource("1_xkqly")]
-position = Vector2(100, 300)
+position = Vector2(155, 214)
 
 [node name="LaserContainer" type="Node2D" parent="."]
 
