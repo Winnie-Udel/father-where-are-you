@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vg5uo8q77pnb"
-path="res://.godot/imported/test_human_ship.png-9ea7fbfc3d37ab2c2f623e81e97428c8.ctex"
+uid="uid://cxvn5apm5tw21"
+path="res://.godot/imported/test_projectile.png-9d795adaff61a27b20fc7355e51e4ce2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholder_arts/test_human_ship.png"
-dest_files=["res://.godot/imported/test_human_ship.png-9ea7fbfc3d37ab2c2f623e81e97428c8.ctex"]
+source_file="res://placeholder_arts/test_projectile.png"
+dest_files=["res://.godot/imported/test_projectile.png-9d795adaff61a27b20fc7355e51e4ce2.ctex"]
 
 [params]
 

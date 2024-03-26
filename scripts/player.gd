@@ -4,6 +4,7 @@ signal laser_shot(laser_scene, location)
 
 # Speed in pixels/sec
 @export var speed = 400 
+@export var health = 100
 @onready var muzzle = $Muzzle
 
 var screen_size 
@@ -16,7 +17,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("attack"):
 		shoot()
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	# Handle movement and deceleration
 	var direction = Input.get_axis("move_up", "move_down")
 	if direction: 
@@ -30,7 +31,12 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-
 func shoot():
 	laser_shot.emit(laser_scene, muzzle.global_position)
 	
+func damage(amount):
+	print("health is " + str(health))
+	health -= amount
+	if health <= 0:
+		# Player dies
+		queue_free()
