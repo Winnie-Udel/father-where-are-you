@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfykudyb6vivv"]
+
+[ext_resource type="Material" uid="uid://bkosmo7tepg52" path="res://art/shaders and materials/water_material.tres" id="1_xvavo"]
+[ext_resource type="Texture2D" uid="uid://bdxdu3iewb2ic" path="res://art/water.png" id="2_x4nj4"]
+
+[node name="water shader" type="Sprite2D"]
+material = ExtResource("1_xvavo")
+texture = ExtResource("2_x4nj4")
