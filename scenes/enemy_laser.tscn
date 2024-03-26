@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhqkgacclyx3v"]
+
+[ext_resource type="PackedScene" uid="uid://dl7bld8yinfpo" path="res://scenes/laser.tscn" id="1_n0dm8"]
+[ext_resource type="Script" path="res://scripts/enemy_laser.gd" id="2_6iwhr"]
+
+[node name="EnemyLaser" instance=ExtResource("1_n0dm8")]
+collision_layer = 8
+collision_mask = 1
+script = ExtResource("2_6iwhr")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(-24, -2)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

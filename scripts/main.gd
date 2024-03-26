@@ -5,6 +5,9 @@ extends Node
 @onready var player = $Player
 @onready var laser_container = $LaserContainer
 @onready var enemy_container = $EnemyContainer
+@onready var hud = $UI/HUB
+
+var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,4 +21,9 @@ func _on_player_laser_shot(laser_scene, location):
 func _on_enemy_timer_timeout():
 	var enemy = enemy_scenes.pick_random().instantiate()
 	enemy.global_position = Vector2(1200, randf_range(50, 600))
+	enemy.killed.connect(_on_enemy_killed)
 	enemy_container.add_child(enemy)
+	
+func _on_enemy_killed():
+	score += 1 
+	hud.update_score(score)
