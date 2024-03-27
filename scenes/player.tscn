@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://ma1lt634pvu5"]
 
-[ext_resource type="Texture2D" uid="uid://cdhskfca2eido" path="res://placeholder_arts/test_wanderer_ship.png" id="1_7io41"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ewt7k"]
+[ext_resource type="Texture2D" uid="uid://b5wh2r3lq1mor" path="res://art/player/Player Fighter Jet.png" id="2_jcnnq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dcwj7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7io41")
+"texture": ExtResource("2_jcnnq")
 }],
 "loop": true,
 "name": &"default",
@@ -24,6 +24,7 @@ script = ExtResource("1_ewt7k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_dcwj7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

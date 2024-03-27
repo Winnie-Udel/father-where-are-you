@@ -6,16 +6,19 @@ signal laser_shot(laser_scene, location)
 @export var speed = 400 
 @export var health = 100
 @onready var muzzle = $Muzzle
+@onready var player_health_bar = get_parent().get_node("PlayerHealthBar")
 
 var screen_size 
 var laser_scene = preload("res://scenes/laser.tscn")
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	player_health_bar.max_value = 100
 	
 func _process(_delta):
 	if Input.is_action_just_pressed("attack"):
 		shoot()
+	set_health_bar()
 	
 func _physics_process(_delta):
 	# Handle movement and deceleration
@@ -30,6 +33,9 @@ func _physics_process(_delta):
 	global_position.y = clamp(global_position.y, 0, screen_size.y)
 	
 	move_and_slide()
+
+func set_health_bar():
+	player_health_bar.value = health
 	
 func shoot():
 	laser_shot.emit(laser_scene, muzzle.global_position)

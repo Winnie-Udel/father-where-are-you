@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bix045j6xmjv4"]
+[gd_scene load_steps=8 format=3 uid="uid://bix045j6xmjv4"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_kctr5"]
 [ext_resource type="PackedScene" uid="uid://ma1lt634pvu5" path="res://scenes/player.tscn" id="1_xkqly"]
+[ext_resource type="PackedScene" uid="uid://c0rtne11pgpsu" path="res://scenes/water_shader.tscn" id="3_te3x1"]
 [ext_resource type="PackedScene" uid="uid://kiobm421mi2k" path="res://scenes/hub.tscn" id="4_1jnnl"]
 [ext_resource type="PackedScene" uid="uid://ccv0e3ldy050e" path="res://scenes/enemy.tscn" id="5_c6em2"]
 [ext_resource type="PackedScene" uid="uid://dhqkgacclyx3v" path="res://scenes/enemy_laser.tscn" id="6_ahu4v"]
@@ -11,11 +12,16 @@
 script = ExtResource("1_kctr5")
 enemy_scenes = Array[PackedScene]([ExtResource("6_wkgn0")])
 
+[node name="water shader" parent="." instance=ExtResource("3_te3x1")]
+position = Vector2(577, 325)
+scale = Vector2(1.91612, 1.64)
+
 [node name="LaserContainer" type="Node2D" parent="."]
 
 [node name="EnemyContainer" type="Node2D" parent="."]
 
 [node name="EnemyTimer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -33,5 +39,12 @@ position = Vector2(512, 400)
 
 [node name="EnemyLaser" parent="." instance=ExtResource("6_ahu4v")]
 position = Vector2(284, 229)
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="."]
+offset_left = 30.0
+offset_top = 600.0
+offset_right = 291.0
+offset_bottom = 627.0
+step = 1.0
 
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]

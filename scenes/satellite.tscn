@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1k7obhkswy1"]
+[gd_scene load_steps=5 format=3 uid="uid://b1k7obhkswy1"]
 
 [ext_resource type="PackedScene" uid="uid://ccv0e3ldy050e" path="res://scenes/enemy.tscn" id="1_0sdno"]
 [ext_resource type="Script" path="res://scripts/satellite.gd" id="2_8r1gg"]
+[ext_resource type="Texture2D" uid="uid://q368kmgooc8m" path="res://art/enemies/Satellite Base.png" id="3_4katp"]
+[ext_resource type="Texture2D" uid="uid://cyh7kpemqn6ku" path="res://art/enemies/Satellite Dish.png" id="3_ilo7d"]
 
 [node name="Satellite" instance=ExtResource("1_0sdno")]
 script = ExtResource("2_8r1gg")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_4katp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" index="0"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_ilo7d")
 
 [node name="Position" type="Node2D" parent="MuzzlePositions" index="0"]
 position = Vector2(-54, 0)
