@@ -36,6 +36,7 @@ position = Vector2(154, 230)
 
 [node name="Satellite" parent="." instance=ExtResource("6_wkgn0")]
 position = Vector2(512, 400)
+rotation_rate = 20
 
 [node name="EnemyLaser" parent="." instance=ExtResource("6_ahu4v")]
 position = Vector2(284, 229)

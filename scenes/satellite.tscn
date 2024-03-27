@@ -7,12 +7,13 @@
 
 [node name="Satellite" instance=ExtResource("1_0sdno")]
 script = ExtResource("2_8r1gg")
+rotation_rate = 20
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_4katp")
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" index="0"]
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" index="0"]
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_ilo7d")
 
