@@ -13,14 +13,14 @@ rotation_rate = 20
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_4katp")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" index="0"]
-scale = Vector2(0.8, 0.8)
+[node name="Dish" type="Sprite2D" parent="." index="1"]
+scale = Vector2(0.08, 0.08)
 texture = ExtResource("3_ilo7d")
 
 [node name="Position" type="Node2D" parent="MuzzlePositions" index="0"]
 position = Vector2(-54, 0)
 
-[node name="ShotTimer" type="Timer" parent="." index="4"]
+[node name="ShotTimer" type="Timer" parent="." index="5"]
 autostart = true
 
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
