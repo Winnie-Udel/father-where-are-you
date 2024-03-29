@@ -1,4 +1,4 @@
-extends Area2D
+class_name Laser extends Area2D
 
 @export var speed = 700 
 

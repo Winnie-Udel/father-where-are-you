@@ -6,11 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cyh7kpemqn6ku" path="res://art/enemies/Satellite Dish.png" id="3_ilo7d"]
 
 [node name="Satellite" instance=ExtResource("1_0sdno")]
+collision_mask = 7
 script = ExtResource("2_8r1gg")
 rotation_rate = 20
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_4katp")
 
 [node name="Dish" type="Sprite2D" parent="." index="1"]
@@ -21,6 +21,8 @@ texture = ExtResource("3_ilo7d")
 position = Vector2(-54, 0)
 
 [node name="ShotTimer" type="Timer" parent="." index="5"]
+wait_time = 3.0
 autostart = true
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

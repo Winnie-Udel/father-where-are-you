@@ -18,10 +18,10 @@ Play as an Alien Wanderer, avenge your father against the human race, and find y
 - [X] Screen Limits: *The wanderer cannot be moved offscreen.*
 - [X] Spawning Enemy Satellite: *Satellite spawns randomly within given boundaries.*
 - [X] Satellite Moves: *Satellite move from right to left.*
-- [ ] Enemy Drone
+- [X] Enemy Drones: *Enemies that shoots laser and bomb.*
 - [ ] Boss Enemy
 - [X] Wanderer Hurt: *If an enemy collides with a wanderer, it loses health.*
-- [ ] Display Stats: *The screen will display the timer, current score, and number of lives.* 
+- [X] Display Stats: *The screen will display the current score and health.* 
 - [ ] Game Over: *The player dies before the timer runs out.* 
 - [ ] Story/Ending Screen
 - [ ] Home Screen  

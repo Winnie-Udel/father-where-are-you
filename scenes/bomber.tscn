@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmhjxu0putosj"]
+
+[ext_resource type="PackedScene" uid="uid://ccv0e3ldy050e" path="res://scenes/enemy.tscn" id="1_wdodo"]
+[ext_resource type="Script" path="res://scenes/bomber.gd" id="2_kioq6"]
+
+[node name="Bomber" instance=ExtResource("1_wdodo")]
+script = ExtResource("2_kioq6")
+
+[node name="Sprite2D" parent="." index="0"]
+rotation = 3.14159
+
+[node name="Position" type="Node2D" parent="MuzzlePositions" index="0"]
+position = Vector2(-40, 0)
+
+[node name="ShotTimer" type="Timer" parent="." index="4"]
+autostart = true
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

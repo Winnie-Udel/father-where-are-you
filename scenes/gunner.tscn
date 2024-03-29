@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://flitqlpuwlu2"]
+
+[ext_resource type="PackedScene" uid="uid://ccv0e3ldy050e" path="res://scenes/enemy.tscn" id="1_5lehy"]
+[ext_resource type="Script" path="res://scripts/gunner.gd" id="2_wrtpx"]
+[ext_resource type="Texture2D" uid="uid://bil7p4f1raplq" path="res://art/enemies/Drone Gunner.png" id="3_kjsix"]
+
+[node name="Gunner" instance=ExtResource("1_5lehy")]
+script = ExtResource("2_wrtpx")
+speed = 250
+health = 2
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_kjsix")
+
+[node name="FirstPosition" type="Node2D" parent="MuzzlePositions" index="0"]
+position = Vector2(-33, -39)
+
+[node name="SecondPosition" type="Node2D" parent="MuzzlePositions" index="1"]
+position = Vector2(-33, 39)
+
+[node name="ShotTimer" type="Timer" parent="." index="4"]
+autostart = true
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
