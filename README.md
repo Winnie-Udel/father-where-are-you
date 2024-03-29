@@ -22,7 +22,7 @@ Play as an Alien Wanderer, avenge your father against the human race, and find y
 - [ ] Boss Enemy
 - [X] Wanderer Hurt: *If an enemy collides with a wanderer, it loses health.*
 - [X] Display Stats: *The screen will display the current score and health.* 
-- [ ] Game Over: *The player dies before the timer runs out.* 
+- [ ] Game Over: *The player dies.* 
 - [ ] Story/Ending Screen
 - [ ] Home Screen  
 - [ ] Instruction Screen
