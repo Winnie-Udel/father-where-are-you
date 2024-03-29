@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm502ies2id2g"]
+
+[ext_resource type="Script" path="res://scripts/win.gd" id="1_vdu3l"]
+
+[node name="Win" type="Node"]
+script = ExtResource("1_vdu3l")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 513.0
+offset_top = 216.0
+offset_right = 553.0
+offset_bottom = 239.0
+text = "You Win!"
+
+[node name="Home" type="Button" parent="."]
+offset_left = 497.0
+offset_top = 456.0
+offset_right = 621.0
+offset_bottom = 499.0
+text = "Home"
+
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]

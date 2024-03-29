@@ -8,6 +8,7 @@ extends Node
 @onready var hud = $UI/HUB
 
 var score = 0
+var boss_enemy_scene = preload("res://scenes/boss_enemy.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,3 +28,14 @@ func _on_enemy_timer_timeout():
 func _on_enemy_killed():
 	score += 1 
 	hud.update_score(score)
+	
+func _on_boss_killed():
+	score += 10
+	hud.update_score(score)
+	get_tree().change_scene_to_file("res://scenes/win.tscn")
+
+func _on_boss_timer_timeout():
+	var boss = boss_enemy_scene.instantiate()
+	boss.global_position = Vector2(1200, 300)
+	boss.killed.connect(_on_boss_killed)
+	enemy_container.add_child(boss)

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://be37asjetn3au"]
+
+[ext_resource type="PackedScene" uid="uid://ccv0e3ldy050e" path="res://scenes/enemy.tscn" id="1_ubyi3"]
+[ext_resource type="Script" path="res://scripts/boss_enemy.gd" id="2_b817q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fqrcs"]
+radius = 120.503
+
+[node name="BossEnemy" instance=ExtResource("1_ubyi3")]
+script = ExtResource("2_b817q")
+health = 50
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(9, 1)
+shape = SubResource("CircleShape2D_fqrcs")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(11, 4.5)
+scale = Vector2(11.4, 9.15)
