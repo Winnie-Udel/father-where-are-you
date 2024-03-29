@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8jlx6e2g8xwq"]
 
 [ext_resource type="PackedScene" uid="uid://dl7bld8yinfpo" path="res://scenes/laser.tscn" id="1_ibbrx"]
-[ext_resource type="Script" path="res://scenes/bomb.gd" id="2_mckxy"]
+[ext_resource type="Script" path="res://scripts/bomb.gd" id="2_mckxy"]
 [ext_resource type="Texture2D" uid="uid://rb34jb53014u" path="res://art/bomb.png" id="3_0xavj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dbvic"]

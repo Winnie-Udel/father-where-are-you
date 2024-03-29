@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdhskfca2eido"
-path="res://.godot/imported/test_wanderer_ship.png-a6284feb1f26be4e6128fc6c61db52e5.ctex"
+uid="uid://nhbkkl8cbqqg"
+path="res://.godot/imported/laserTeal.png-b14c7e09a4d74c672c83fa6c7e4c75b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholder_arts/test_wanderer_ship.png"
-dest_files=["res://.godot/imported/test_wanderer_ship.png-a6284feb1f26be4e6128fc6c61db52e5.ctex"]
+source_file="res://assets/laserTeal.png"
+dest_files=["res://.godot/imported/laserTeal.png-b14c7e09a4d74c672c83fa6c7e4c75b0.ctex"]
 
 [params]
 

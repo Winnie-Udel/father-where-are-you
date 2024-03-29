@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bix045j6xmjv4"]
+[gd_scene load_steps=11 format=3 uid="uid://bix045j6xmjv4"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_kctr5"]
 [ext_resource type="PackedScene" uid="uid://ma1lt634pvu5" path="res://scenes/player.tscn" id="1_xkqly"]
@@ -12,6 +12,9 @@
 [sub_resource type="Theme" id="Theme_53otj"]
 default_font = ExtResource("7_iapr5")
 default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_7mxx8"]
+default_font = ExtResource("7_iapr5")
 
 [node name="Main" type="Node"]
 script = ExtResource("1_kctr5")
@@ -29,23 +32,39 @@ scale = Vector2(1.91612, 1.64)
 wait_time = 4.0
 autostart = true
 
+[node name="BossTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="HUB" parent="UI" instance=ExtResource("4_1jnnl")]
 texture_filter = 1
 theme = SubResource("Theme_53otj")
 
+[node name="Label" type="Label" parent="UI"]
+texture_filter = 1
+offset_left = 13.0
+offset_top = 605.0
+offset_right = 114.0
+offset_bottom = 628.0
+theme = SubResource("Theme_7mxx8")
+text = "Health:
+"
+
 [node name="Player" parent="." instance=ExtResource("1_xkqly")]
 position = Vector2(154, 230)
 
 [node name="PlayerHealthBar" type="ProgressBar" parent="."]
-offset_left = 30.0
-offset_top = 600.0
-offset_right = 291.0
-offset_bottom = 627.0
+offset_left = 80.0
+offset_top = 603.0
+offset_right = 341.0
+offset_bottom = 630.0
 step = 1.0
 
 [node name="Bomber" parent="." instance=ExtResource("4_a40u0")]
 position = Vector2(730, 232)
 
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]
+[connection signal="timeout" from="BossTimer" to="." method="_on_boss_timer_timeout"]

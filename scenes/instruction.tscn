@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://kjb6s0s3r5wk"]
+
+[ext_resource type="Script" path="res://instruction.gd" id="1_8ayru"]
+
+[node name="Instruction" type="Node"]
+script = ExtResource("1_8ayru")
+
+[node name="Ready" type="Button" parent="."]
+offset_left = 454.0
+offset_top = 479.0
+offset_right = 662.0
+offset_bottom = 523.0
+text = "Ready"
+
+[connection signal="pressed" from="Ready" to="." method="_on_ready_pressed"]

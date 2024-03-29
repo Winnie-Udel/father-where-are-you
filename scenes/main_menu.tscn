@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://deoxmwbxqvivv"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_afjbn"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_afjbn")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 454.0
+offset_top = 440.0
+offset_right = 682.0
+offset_bottom = 505.0
+text = "Play"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
