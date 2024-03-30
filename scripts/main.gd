@@ -6,6 +6,7 @@ extends Node
 @onready var laser_container = $LaserContainer
 @onready var enemy_container = $EnemyContainer
 @onready var hud = $UI/HUB
+@onready var boss_health_bar = $BossHealthBar
 
 var score = 0
 var boss_enemy_scene = preload("res://scenes/boss_enemy.tscn")
@@ -13,6 +14,7 @@ var boss_enemy_scene = preload("res://scenes/boss_enemy.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player.laser_shot.connect(_on_player_laser_shot)
+	boss_health_bar.hide()
 
 func _on_player_laser_shot(laser_scene, location):
 	var laser = laser_scene.instantiate()
@@ -35,7 +37,8 @@ func _on_boss_killed():
 	get_tree().change_scene_to_file("res://scenes/win.tscn")
 
 func _on_boss_timer_timeout():
+	boss_health_bar.show()
 	var boss = boss_enemy_scene.instantiate()
 	boss.global_position = Vector2(1200, 300)
 	boss.killed.connect(_on_boss_killed)
-	enemy_container.add_child(boss)
+	add_child(boss)

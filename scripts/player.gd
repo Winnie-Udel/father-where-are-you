@@ -41,7 +41,6 @@ func shoot():
 	laser_shot.emit(laser_scene, muzzle.global_position)
 	
 func damage(amount):
-	print("health is " + str(health))
 	health -= amount
 	if health <= 0:
 		# Player dies
