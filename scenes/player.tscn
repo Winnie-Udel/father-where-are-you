@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ma1lt634pvu5"]
+[gd_scene load_steps=6 format=3 uid="uid://ma1lt634pvu5"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ewt7k"]
 [ext_resource type="Texture2D" uid="uid://b5wh2r3lq1mor" path="res://art/player/Player Fighter Jet.png" id="2_jcnnq"]
+[ext_resource type="AudioStream" uid="uid://d2p5e8tkx0aau" path="res://audio/sound effect/Laser Shot.wav" id="3_812fg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dcwj7"]
 animations = [{
@@ -33,3 +34,6 @@ shape = SubResource("CircleShape2D_4kpkr")
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(50, 0)
 scale = Vector2(1.04389, 4.19792)
+
+[node name="Shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_812fg")

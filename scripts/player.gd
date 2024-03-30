@@ -7,6 +7,7 @@ signal laser_shot(laser_scene, location)
 @export var health = 100
 @onready var muzzle = $Muzzle
 @onready var player_health_bar = get_parent().get_node("PlayerHealthBar")
+@onready var shoot_sound = $Shoot
 
 var screen_size 
 var laser_scene = preload("res://scenes/laser.tscn")
@@ -17,6 +18,7 @@ func _ready():
 	
 func _process(_delta):
 	if Input.is_action_just_pressed("attack"):
+		shoot_sound.play()
 		shoot()
 	set_health_bar()
 	

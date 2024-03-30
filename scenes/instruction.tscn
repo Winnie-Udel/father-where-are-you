@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://kjb6s0s3r5wk"]
+[gd_scene load_steps=3 format=3 uid="uid://kjb6s0s3r5wk"]
 
 [ext_resource type="Script" path="res://scripts/instruction.gd" id="1_8ayru"]
+[ext_resource type="AudioStream" uid="uid://bnsl72tedse41" path="res://audio/sound effect/Menu Selection Click.wav" id="2_sgwct"]
 
 [node name="Instruction" type="Node"]
 script = ExtResource("1_8ayru")
@@ -11,5 +12,8 @@ offset_top = 479.0
 offset_right = 662.0
 offset_bottom = 523.0
 text = "Ready"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_sgwct")
 
 [connection signal="pressed" from="Ready" to="." method="_on_ready_pressed"]

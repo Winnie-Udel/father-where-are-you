@@ -7,6 +7,7 @@ extends Node
 @onready var enemy_container = $EnemyContainer
 @onready var hud = $UI/HUB
 @onready var boss_health_bar = $BossHealthBar
+@onready var boss_timer = $BossTimer
 
 var score = 0
 var boss_enemy_scene = preload("res://scenes/boss_enemy.tscn")
@@ -16,12 +17,16 @@ func _ready():
 	player.laser_shot.connect(_on_player_laser_shot)
 	boss_health_bar.hide()
 
+func _process(_delta):
+	hud.update_timer_display(round(boss_timer.time_left))
+
 func _on_player_laser_shot(laser_scene, location):
 	var laser = laser_scene.instantiate()
 	laser.global_position = location
 	laser_container.add_child(laser)
 
 func _on_enemy_timer_timeout():
+	# Pick a random enemy from the array of enemies
 	var enemy = enemy_scenes.pick_random().instantiate()
 	enemy.global_position = Vector2(1200, randf_range(50, 600))
 	enemy.killed.connect(_on_enemy_killed)
