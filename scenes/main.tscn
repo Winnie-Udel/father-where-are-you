@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bix045j6xmjv4"]
+[gd_scene load_steps=11 format=3 uid="uid://bix045j6xmjv4"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_kctr5"]
 [ext_resource type="PackedScene" uid="uid://ma1lt634pvu5" path="res://scenes/player.tscn" id="1_xkqly"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://kiobm421mi2k" path="res://scenes/hub.tscn" id="4_1jnnl"]
 [ext_resource type="PackedScene" uid="uid://dmhjxu0putosj" path="res://scenes/bomber.tscn" id="4_a40u0"]
 [ext_resource type="PackedScene" uid="uid://b1k7obhkswy1" path="res://scenes/satellite.tscn" id="6_wkgn0"]
+[ext_resource type="AudioStream" uid="uid://btthfltyex4yi" path="res://audio/music/through space.ogg" id="8_w30hh"]
+[ext_resource type="AudioStream" uid="uid://itfcfrt3dfwp" path="res://audio/music/Battle in the winter.mp3" id="9_fxfwh"]
+[ext_resource type="AudioStream" uid="uid://crc7x41r1r1ip" path="res://audio/sound effect/mechanical_explosion.wav" id="10_yhaco"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_kctr5")
@@ -26,7 +29,7 @@ scale = Vector2(1.91612, 1.64)
 [node name="EnemyContainer" type="Node2D" parent="."]
 
 [node name="EnemyTimer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 2.0
 autostart = true
 
 [node name="BossTimer" type="Timer" parent="."]
@@ -37,5 +40,21 @@ autostart = true
 [node name="Player" parent="." instance=ExtResource("1_xkqly")]
 position = Vector2(154, 230)
 
+[node name="SpaceMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_w30hh")
+volume_db = -15.0
+
+[node name="BossMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_fxfwh")
+
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_yhaco")
+volume_db = -20.0
+
+[node name="WaitTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_enemy_timer_timeout"]
 [connection signal="timeout" from="BossTimer" to="." method="_on_boss_timer_timeout"]
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

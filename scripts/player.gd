@@ -30,8 +30,8 @@ func _physics_process(_delta):
 	else:
 		velocity.y = move_toward(velocity.y, 0, 10)
 		
-	# Prevent character from moving offscreen
-	global_position.x = clamp(global_position.x, 0, screen_size.x)
+	# Prevent character from moving offscreen, can move offscreen for x position
+	global_position.x = clamp(global_position.x, 0, screen_size.x + 500)
 	global_position.y = clamp(global_position.y, 0, screen_size.y)
 	
 	move_and_slide()

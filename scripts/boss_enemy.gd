@@ -1,13 +1,17 @@
 extends Enemy
 
 @export var attacks: Array[PackedScene] = []
+@export var rotation_rate = 80
+
+@onready var boss = $Sprite2D
 @onready var boss_health_bar = get_parent().get_node("UI/HUB/BossHealthBar")
 
 func _ready():
 	boss_health_bar.max_value = 50
 
-func _process(_delta):
+func _process(delta):
 	set_health_bar()
+	boss.rotate(deg_to_rad(rotation_rate) * delta)
 	
 func _physics_process(delta):
 	position.x += -speed * delta

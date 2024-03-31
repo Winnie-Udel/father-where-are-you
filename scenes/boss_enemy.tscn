@@ -11,6 +11,7 @@ radius = 120.503
 [node name="BossEnemy" instance=ExtResource("1_ubyi3")]
 script = ExtResource("2_b817q")
 attacks = Array[PackedScene]([ExtResource("3_cojea"), ExtResource("4_fpasy")])
+rotation_rate = 80
 health = 50
 
 [node name="Sprite2D" parent="." index="0"]
@@ -25,16 +26,19 @@ position = Vector2(11, 4.5)
 scale = Vector2(11.4, 9.15)
 
 [node name="FirstPosition" type="Node2D" parent="MuzzlePositions" index="0"]
-position = Vector2(-88, 78)
+position = Vector2(-93, -93)
 
 [node name="SecondPosition" type="Node2D" parent="MuzzlePositions" index="1"]
-position = Vector2(-104, 0)
+position = Vector2(-109, -42)
 
 [node name="ThirdPosition" type="Node2D" parent="MuzzlePositions" index="2"]
-position = Vector2(-86, -82)
+position = Vector2(-110, 22)
+
+[node name="FouthPosition" type="Node2D" parent="MuzzlePositions" index="3"]
+position = Vector2(-98, 84)
 
 [node name="ShotTimer" type="Timer" parent="." index="4"]
-wait_time = 4.0
+wait_time = 3.0
 autostart = true
 
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

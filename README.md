@@ -8,7 +8,14 @@ Play as an Alien Wanderer, avenge your father against the human race, and find y
 
 ## Author 
 
-## Acknowledgements 
+## Credits 
+- "Space Shooter Art" by Kenney
+- "Sci-Fi UI Panel" by bart
+- "Menu Selection Click" by NenadSimic
+- "Laser Shot" by Mobeyee Sounds
+- "Battle in the Winter" by jobromedia
+- "Through Space" by maxstack
+- "Mechanical Explosion" by Spring Spring
 
 ## Game Plan 
 
