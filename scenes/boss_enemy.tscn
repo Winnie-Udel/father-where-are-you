@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://be37asjetn3au"]
+[gd_scene load_steps=7 format=3 uid="uid://be37asjetn3au"]
 
 [ext_resource type="PackedScene" uid="uid://ccv0e3ldy050e" path="res://scenes/enemy.tscn" id="1_ubyi3"]
 [ext_resource type="Script" path="res://scripts/boss_enemy.gd" id="2_b817q"]
 [ext_resource type="PackedScene" uid="uid://dhqkgacclyx3v" path="res://scenes/enemy_laser.tscn" id="3_cojea"]
 [ext_resource type="PackedScene" uid="uid://c8jlx6e2g8xwq" path="res://scenes/bomb.tscn" id="4_fpasy"]
+[ext_resource type="Texture2D" uid="uid://dg37sil8y7bc0" path="res://assets/SS1.png" id="5_syi67"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fqrcs"]
 radius = 120.503
@@ -15,7 +16,9 @@ rotation_rate = 80
 health = 50
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(0.3, 0.3)
+position = Vector2(9, 0)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("5_syi67")
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(9, 1)
@@ -26,16 +29,16 @@ position = Vector2(11, 4.5)
 scale = Vector2(11.4, 9.15)
 
 [node name="FirstPosition" type="Node2D" parent="MuzzlePositions" index="0"]
-position = Vector2(-93, -93)
+position = Vector2(10, -120)
 
 [node name="SecondPosition" type="Node2D" parent="MuzzlePositions" index="1"]
-position = Vector2(-109, -42)
+position = Vector2(-96, -60)
 
 [node name="ThirdPosition" type="Node2D" parent="MuzzlePositions" index="2"]
-position = Vector2(-110, 22)
+position = Vector2(-94, 60)
 
 [node name="FouthPosition" type="Node2D" parent="MuzzlePositions" index="3"]
-position = Vector2(-98, 84)
+position = Vector2(11, 119)
 
 [node name="ShotTimer" type="Timer" parent="." index="4"]
 wait_time = 3.0

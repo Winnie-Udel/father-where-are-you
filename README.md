@@ -14,7 +14,7 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 | <img src="art/enemies/combined satellite.png" height="50"> | A device employed by the minions of Earth! <br/> Once detected by it, it shoots lasers at a rapid pace! 
 | <img src="art/enemies/Drone Gunner.png" height="50">  | That speed is no joke. <br/> Double the laser and double the speed of the satellite! |
 | <img src="art/enemies/Drone Bomber.png" height="50">  | Slow, but dangerous! <br/> Shoots bomb that rapidly decreases your health! Destroy the bomb with your lasers! |
-| <img src="???" height="50">   | Final boss! <br/> Use both laser and bomb attacks, beware!                          |
+| <img src="assets/SS1.png" height="80">   | Final boss! <br/> Use both laser and bomb attacks, beware!                          |
 
 ## Author 
 | Name                  | UD Email               |
@@ -29,13 +29,17 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 - "Satellite Dish" by Joshua Chelen
 - "Drone Gunner" by Joshua Chelen
 - "Drone Bomber" by Joshua Chelen
-- "Space Shooter Art" by Kenney
-- "Sci-Fi UI Panel" by bart
-- "Menu Selection Click" by NenadSimic
-- "Laser Shot" by Mobeyee Sounds
-- "Battle in the Winter" by jobromedia
-- "Through Space" by maxstack
-- "Mechanical Explosion" by Spring Spring
+- ["Textured Space Station" by MillionthVector](https://opengameart.org/content/textured-space-station)
+- ["Space Shooter Art" by Kenney](https://opengameart.org/content/space-shooter-art)
+- ["Sci-Fi UI Panel" by bart](https://opengameart.org/content/sci-fi-ui-panel)
+- ["Camera Mapped Space Background" by Explosive Ninja](https://opengameart.org/content/camera-mapped-space-background)
+- ["Battle in the Winter" by jobromedia](https://opengameart.org/content/battle-in-the-winter)
+- ["Through Space" by maxstack](https://opengameart.org/content/through-space)
+- ["The Sad Battle" by Eldritch Grim](https://opengameart.org/content/the-sad-battle)
+- ["Menu Selection Click" by NenadSimic](https://opengameart.org/content/menu-selection-click)
+- ["Laser Shot" by Mobeyee Sounds](https://opengameart.org/content/laser-shot-0)
+- ["Mechanical Explosion" by Spring Spring](https://opengameart.org/content/mechanical-explosion)
+
 
 ## Game Plan 
 
@@ -46,10 +50,10 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 - [X] Spawning Enemy Satellite: *Satellite spawns randomly within given boundaries.*
 - [X] Satellite Moves: *Satellite move from right to left.*
 - [X] Enemy Drones: *Enemies that shoots laser and bomb.*
-- [ ] Boss Enemy: *Spawns after a set amount of time. Shoots both lasers and bomb.*
+- [X] Boss Enemy: *Spawns after a set amount of time. Shoots both lasers and bomb.*
 - [X] Wanderer Hurt: *If an enemy collides with a wanderer, it loses health.*
 - [X] Display Stats: *The screen will display the current score and health.* 
-- [ ] Game Over: *Scene that plays after the player dies.* 
+- [X] Game Over: *Scene that plays after the player dies.* 
 - [ ] Story/Ending Screen: *Cutscenes.*
 - [ ] Home Screen: *Main menu screen exists.*
 - [ ] Instruction Screen

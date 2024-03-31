@@ -16,4 +16,5 @@ text = "Play"
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_aykil")
 
+[connection signal="button_down" from="Play" to="." method="_on_play_button_down"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

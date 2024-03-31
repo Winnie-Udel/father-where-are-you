@@ -1,30 +1,90 @@
-[gd_scene load_steps=2 format=3 uid="uid://igavpm34f5fj"]
+[gd_scene load_steps=7 format=3 uid="uid://igavpm34f5fj"]
 
 [ext_resource type="Script" path="res://scripts/defeated.gd" id="1_5v5iq"]
+[ext_resource type="FontFile" uid="uid://3gj20nwrx5pw" path="res://fonts/CrayonLibre.ttf" id="2_i30t3"]
+[ext_resource type="Texture2D" uid="uid://bki7dd4jfrjbx" path="res://assets/outer_space.png" id="2_v1n36"]
+[ext_resource type="Texture2D" uid="uid://cuuhimtiw0tn4" path="res://assets/futureui1.png" id="3_q1wfl"]
+[ext_resource type="AudioStream" uid="uid://tvujbr7sknrl" path="res://audio/music/the_sad_battle.mp3" id="5_77usy"]
+[ext_resource type="AudioStream" uid="uid://bnsl72tedse41" path="res://audio/sound effect/Menu Selection Click.wav" id="6_ws6rf"]
 
 [node name="Defeated" type="Node"]
 script = ExtResource("1_5v5iq")
 
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 329)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_v1n36")
+
+[node name="UI" type="NinePatchRect" parent="."]
+offset_left = 157.0
+offset_top = 208.0
+offset_right = 945.0
+offset_bottom = 322.0
+texture = ExtResource("3_q1wfl")
+region_rect = Rect2(4.40021, 2.00018, 2682.87, 276)
+
 [node name="Label" type="Label" parent="."]
-offset_left = 472.0
-offset_top = 210.0
-offset_right = 603.0
-offset_bottom = 233.0
-text = "Defeated!"
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = -78.0
+offset_right = 198.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_i30t3")
+theme_override_font_sizes/font_size = 35
+text = "Reinforcements Approaching..."
 
 [node name="TryAgain" type="Button" parent="."]
-offset_left = 471.0
-offset_top = 401.0
-offset_right = 603.0
-offset_bottom = 455.0
-text = "Try Again?"
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = 23.0
+offset_right = 180.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_i30t3")
+theme_override_font_sizes/font_size = 20
+text = "Overtake Another Fighter Jet"
 
 [node name="Home" type="Button" parent="."]
-offset_left = 457.0
-offset_top = 485.0
-offset_right = 613.0
-offset_bottom = 545.0
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = 108.0
+offset_right = 78.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_i30t3")
+theme_override_font_sizes/font_size = 20
 text = "Home"
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_77usy")
+volume_db = -15.0
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ws6rf")
+
+[connection signal="button_down" from="TryAgain" to="." method="_on_try_again_button_down"]
 [connection signal="pressed" from="TryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="button_down" from="Home" to="." method="_on_home_button_down"]
 [connection signal="pressed" from="Home" to="." method="_on_home_pressed"]

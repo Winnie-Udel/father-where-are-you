@@ -1,7 +1,9 @@
 extends Node
 
-@onready var click_sound = $Click
+@onready var click = $Click
 
 func _on_play_pressed():
-	click_sound.play()
 	get_tree().change_scene_to_file("res://scenes/instruction.tscn")
+
+func _on_play_button_down():
+	click.play()
