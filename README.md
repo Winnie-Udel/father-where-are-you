@@ -1,10 +1,20 @@
 # Father, Where Are You?
 
-Play as an Alien Wanderer, avenge your father against the human race, and find your father. 
+Play as a member of the Xerathans, avenge your father against the human race, and find your father. 
 
 ## About 
 
 ## Preview 
+
+## Instructions
+
+| Game Element                            | Description                                                               |
+|:----------------------------------------|:--------------------------------------------------------------------------|
+| <img src="art/player/Player Fighter Jet.png" height="50"> | You are a member of the Xerathans. <br/> Use the arrow keys or W and S to move the player up and down. Use the space key to attack!               |
+| <img src="art/enemies/combined satellite.png" height="50"> | A device employed by the minions of Earth! <br/> Once detected by it, it shoots lasers at a rapid pace! 
+| <img src="art/enemies/Drone Gunner.png" height="50">  | That speed is no joke. <br/> Double the laser and double the speed of the satellite! |
+| <img src="art/enemies/Drone Bomber.png" height="50">  | Slow, but dangerous! <br/> Shoots bomb that rapidly decreases your health! Destroy the bomb with your lasers! |
+| <img src="???" height="50">   | Final boss! <br/> Use both laser and bomb attacks, beware!                          |
 
 ## Author 
 | Name                  | UD Email               |
