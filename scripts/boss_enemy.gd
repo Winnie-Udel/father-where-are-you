@@ -1,7 +1,7 @@
 extends Enemy
 
 @export var attacks: Array[PackedScene] = []
-@onready var boss_health_bar = get_parent().get_node("BossHealthBar")
+@onready var boss_health_bar = get_parent().get_node("UI/HUB/BossHealthBar")
 
 func _ready():
 	boss_health_bar.max_value = 50

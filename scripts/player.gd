@@ -6,7 +6,7 @@ signal laser_shot(laser_scene, location)
 @export var speed = 400 
 @export var health = 100
 @onready var muzzle = $Muzzle
-@onready var player_health_bar = get_parent().get_node("PlayerHealthBar")
+@onready var player_health_bar = get_parent().get_node("UI/HUB/PlayerHealthBar")
 @onready var shoot_sound = $Shoot
 
 var screen_size 

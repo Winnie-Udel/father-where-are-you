@@ -6,11 +6,12 @@ extends Node
 @onready var laser_container = $LaserContainer
 @onready var enemy_container = $EnemyContainer
 @onready var hud = $UI/HUB
-@onready var boss_health_bar = $BossHealthBar
+@onready var boss_health_bar = get_node("UI/HUB/BossHealthBar")
 @onready var boss_timer = $BossTimer
 
 var score = 0
 var boss_enemy_scene = preload("res://scenes/boss_enemy.tscn")
+var seconds
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,7 +19,8 @@ func _ready():
 	boss_health_bar.hide()
 
 func _process(_delta):
-	hud.update_timer_display(round(boss_timer.time_left))
+	seconds = round(boss_timer.time_left)
+	hud.update_timer_display(seconds)
 
 func _on_player_laser_shot(laser_scene, location):
 	var laser = laser_scene.instantiate()

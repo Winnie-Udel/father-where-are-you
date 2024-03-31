@@ -1,6 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://kiobm421mi2k"]
+[gd_scene load_steps=9 format=3 uid="uid://kiobm421mi2k"]
 
 [ext_resource type="Script" path="res://scripts/HUB.gd" id="1_8u6do"]
+[ext_resource type="FontFile" uid="uid://3gj20nwrx5pw" path="res://fonts/CrayonLibre.ttf" id="2_14b6j"]
+[ext_resource type="Texture2D" uid="uid://cuuhimtiw0tn4" path="res://assets/futureui1.png" id="2_xlkqw"]
+
+[sub_resource type="Theme" id="Theme_sh11f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m305g"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1ard"]
+bg_color = Color(0, 0.87451, 0.454902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynoef"]
+bg_color = Color(0.392157, 0.392157, 0.392157, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2uc1"]
+bg_color = Color(1, 0.635294, 0.301961, 1)
 
 [node name="HUB" type="Control"]
 layout_mode = 3
@@ -11,20 +35,74 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8u6do")
 
+[node name="UI" type="NinePatchRect" parent="."]
+offset_left = 200.0
+offset_top = 21.0
+offset_right = 988.0
+offset_bottom = 135.0
+texture = ExtResource("2_xlkqw")
+region_rect = Rect2(4.40021, 2.00018, 2682.87, 276)
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 488.0
+offset_top = 48.0
+offset_right = 715.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_14b6j")
+text = "Boss Spawns In"
+horizontal_alignment = 1
+
 [node name="Score" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_left = 224.0
+offset_top = 78.0
+offset_right = -791.0
+offset_bottom = 114.0
 grow_horizontal = 2
-text = "Score: 0"
-horizontal_alignment = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_14b6j")
+theme_override_font_sizes/font_size = 18
+text = "SCORE: 0"
 vertical_alignment = 1
 
 [node name="BossSpawnTime" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 860.0
-offset_top = 1.0
-offset_right = 900.0
-offset_bottom = 24.0
-text = "Boss Spawn In: "
+offset_left = 488.0
+offset_top = 66.0
+offset_right = 715.0
+offset_bottom = 102.0
+theme = SubResource("Theme_sh11f")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_14b6j")
+theme_override_font_sizes/font_size = 30
+text = "0:00"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="."]
+offset_left = 226.0
+offset_top = 59.0
+offset_right = 473.0
+offset_bottom = 69.0
+theme_override_styles/background = SubResource("StyleBoxFlat_m305g")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k1ard")
+step = 1.0
+show_percentage = false
+
+[node name="BossHealthBar" type="ProgressBar" parent="."]
+offset_left = 725.0
+offset_top = 57.0
+offset_right = 972.0
+offset_bottom = 67.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ynoef")
+theme_override_styles/fill = SubResource("StyleBoxFlat_y2uc1")
+max_value = 50.0
+step = 1.0
+show_percentage = false
