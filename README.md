@@ -23,6 +23,12 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 | Joshua Chelen         | jchelen@udel.edu       |
 
 ## Credits 
+- Cutscenes animated by Joshua Chelen 
+- "Player Fighter Jet" by Joshua Chelen 
+- "Satellite Base" by Joshua Chelen 
+- "Satellite Dish" by Joshua Chelen
+- "Drone Gunner" by Joshua Chelen
+- "Drone Bomber" by Joshua Chelen
 - "Space Shooter Art" by Kenney
 - "Sci-Fi UI Panel" by bart
 - "Menu Selection Click" by NenadSimic
@@ -40,11 +46,11 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 - [X] Spawning Enemy Satellite: *Satellite spawns randomly within given boundaries.*
 - [X] Satellite Moves: *Satellite move from right to left.*
 - [X] Enemy Drones: *Enemies that shoots laser and bomb.*
-- [ ] Boss Enemy
+- [ ] Boss Enemy: *Spawns after a set amount of time. Shoots both lasers and bomb.*
 - [X] Wanderer Hurt: *If an enemy collides with a wanderer, it loses health.*
 - [X] Display Stats: *The screen will display the current score and health.* 
-- [ ] Game Over: *The player dies.* 
-- [ ] Story/Ending Screen
-- [ ] Home Screen  
+- [ ] Game Over: *Scene that plays after the player dies.* 
+- [ ] Story/Ending Screen: *Cutscenes.*
+- [ ] Home Screen: *Main menu screen exists.*
 - [ ] Instruction Screen
 
