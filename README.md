@@ -10,7 +10,7 @@ Play as an Alien Wanderer, avenge your father against the human race, and find y
 | Name                  | UD Email               |
 |:----------------------|:-----------------------|
 | Winnie Li             | winnie@udel.edu        |
-| Josh Chelen           | jchelen@udel.edu       |
+| Joshua Chelen         | jchelen@udel.edu       |
 
 ## Credits 
 - "Space Shooter Art" by Kenney
