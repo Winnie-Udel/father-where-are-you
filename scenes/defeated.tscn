@@ -79,7 +79,7 @@ text = "Home"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_77usy")
-volume_db = -15.0
+volume_db = -5.0
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ws6rf")

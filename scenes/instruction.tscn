@@ -1,19 +1,70 @@
-[gd_scene load_steps=3 format=3 uid="uid://kjb6s0s3r5wk"]
+[gd_scene load_steps=6 format=3 uid="uid://kjb6s0s3r5wk"]
 
 [ext_resource type="Script" path="res://scripts/instruction.gd" id="1_8ayru"]
+[ext_resource type="FontFile" uid="uid://3gj20nwrx5pw" path="res://fonts/CrayonLibre.ttf" id="2_004n3"]
+[ext_resource type="PackedScene" uid="uid://c0rtne11pgpsu" path="res://scenes/water_shader.tscn" id="2_id5dp"]
 [ext_resource type="AudioStream" uid="uid://bnsl72tedse41" path="res://audio/sound effect/Menu Selection Click.wav" id="2_sgwct"]
+[ext_resource type="Texture2D" uid="uid://cuuhimtiw0tn4" path="res://assets/futureui1.png" id="2_uhxwm"]
 
 [node name="Instruction" type="Node"]
 script = ExtResource("1_8ayru")
 
+[node name="water shader" parent="." instance=ExtResource("2_id5dp")]
+position = Vector2(577, 325)
+scale = Vector2(1.91612, 1.64)
+
+[node name="UI" type="NinePatchRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -394.0
+offset_top = -101.0
+offset_right = 394.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uhxwm")
+region_rect = Rect2(4.40021, 2.00018, 2682.87, 276)
+
+[node name="Text" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -357.5
+offset_top = -65.5
+offset_right = 357.5
+offset_bottom = -22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_004n3")
+theme_override_font_sizes/font_size = 17
+text = "You are a member of the Xerathans.
+Use the arrow keys or W and S to move the player up and down. Use the space key to attack!"
+
 [node name="Ready" type="Button" parent="."]
-offset_left = 454.0
-offset_top = 479.0
-offset_right = 662.0
-offset_bottom = 523.0
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 184.0
+offset_top = 15.0
+offset_right = 392.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_004n3")
+theme_override_font_sizes/font_size = 20
 text = "Ready"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_sgwct")
 
+[connection signal="button_down" from="Ready" to="." method="_on_ready_button_down"]
 [connection signal="pressed" from="Ready" to="." method="_on_ready_pressed"]

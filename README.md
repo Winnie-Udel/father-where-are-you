@@ -11,7 +11,7 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 | Game Element                            | Description                                                               |
 |:----------------------------------------|:--------------------------------------------------------------------------|
 | <img src="art/player/Player Fighter Jet.png" height="50"> | You are a member of the Xerathans. <br/> Use the arrow keys or W and S to move the player up and down. Use the space key to attack!               |
-| <img src="art/enemies/combined satellite.png" height="50"> | A device employed by the minions of Earth! <br/> Once detected by it, it shoots lasers at a rapid pace! 
+| <img src="art/enemies/combined satellite.png" height="50"> | Satellite deployed by the minions of Earth! <br/> Once detected by it, it shoots lasers at a rapid pace! 
 | <img src="art/enemies/Drone Gunner.png" height="50">  | That speed is no joke. <br/> Double the laser and double the speed of the satellite! |
 | <img src="art/enemies/Drone Bomber.png" height="50">  | Slow, but dangerous! <br/> Shoots bomb that rapidly decreases your health! Destroy the bomb with your lasers! |
 | <img src="assets/SS1.png" height="80">   | Final boss! <br/> Use both laser and bomb attacks, beware!                          |
@@ -36,6 +36,7 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 - ["Battle in the Winter" by jobromedia](https://opengameart.org/content/battle-in-the-winter)
 - ["Through Space" by maxstack](https://opengameart.org/content/through-space)
 - ["The Sad Battle" by Eldritch Grim](https://opengameart.org/content/the-sad-battle)
+- ["Menu Music" by mrpoly](https://opengameart.org/content/menu-music)
 - ["Menu Selection Click" by NenadSimic](https://opengameart.org/content/menu-selection-click)
 - ["Laser Shot" by Mobeyee Sounds](https://opengameart.org/content/laser-shot-0)
 - ["Mechanical Explosion" by Spring Spring](https://opengameart.org/content/mechanical-explosion)
@@ -56,5 +57,5 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 - [X] Game Over: *Scene that plays after the player dies.* 
 - [ ] Story/Ending Screen: *Cutscenes.*
 - [ ] Home Screen: *Main menu screen exists.*
-- [ ] Instruction Screen
+- [X] Instruction Screen: *Screen with player instructions.*
 

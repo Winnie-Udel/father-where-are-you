@@ -1,20 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://deoxmwbxqvivv"]
+[gd_scene load_steps=5 format=3 uid="uid://deoxmwbxqvivv"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_afjbn"]
 [ext_resource type="AudioStream" uid="uid://bnsl72tedse41" path="res://audio/sound effect/Menu Selection Click.wav" id="2_aykil"]
+[ext_resource type="FontFile" uid="uid://3gj20nwrx5pw" path="res://fonts/CrayonLibre.ttf" id="2_u37nc"]
+[ext_resource type="AudioStream" uid="uid://bru3qstml80be" path="res://audio/music/awesomeness.wav" id="4_vfore"]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_afjbn")
 
 [node name="Play" type="Button" parent="."]
-offset_left = 454.0
-offset_top = 440.0
-offset_right = 682.0
-offset_bottom = 505.0
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = 68.0
+offset_right = 114.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_u37nc")
+theme_override_font_sizes/font_size = 20
 text = "Play"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_aykil")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vfore")
 
 [connection signal="button_down" from="Play" to="." method="_on_play_button_down"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
