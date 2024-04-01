@@ -1,7 +1,6 @@
 extends Node
 
 @onready var click = $Click
-@onready var button = get_node("MainUI/Play")
 @onready var music = $Music
 @onready var scene_music = $SceneMusic
 @onready var cutscene = $Cutscene
