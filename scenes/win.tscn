@@ -1,22 +1,63 @@
-[gd_scene load_steps=2 format=3 uid="uid://cm502ies2id2g"]
+[gd_scene load_steps=7 format=3 uid="uid://cm502ies2id2g"]
 
 [ext_resource type="Script" path="res://scripts/win.gd" id="1_vdu3l"]
+[ext_resource type="Texture2D" uid="uid://cuuhimtiw0tn4" path="res://assets/futureui1.png" id="2_556vs"]
+[ext_resource type="Texture2D" uid="uid://bki7dd4jfrjbx" path="res://assets/outer_space.png" id="2_ghn5x"]
+[ext_resource type="FontFile" uid="uid://3gj20nwrx5pw" path="res://fonts/CrayonLibre.ttf" id="3_srvhc"]
+[ext_resource type="AudioStream" uid="uid://bnsl72tedse41" path="res://audio/sound effect/Menu Selection Click.wav" id="5_y4r17"]
+[ext_resource type="AudioStream" uid="uid://cifgsgkkmi6ie" path="res://audio/music/The Fallen MP3.mp3" id="6_iffeh"]
 
 [node name="Win" type="Node"]
 script = ExtResource("1_vdu3l")
 
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-52, 606)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_ghn5x")
+
+[node name="UI" type="NinePatchRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -394.0
+offset_top = -97.0
+offset_right = 394.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_556vs")
+region_rect = Rect2(4.40021, 2.00018, 2682.87, 276)
+
 [node name="Label" type="Label" parent="."]
-offset_left = 513.0
-offset_top = 216.0
-offset_right = 553.0
-offset_bottom = 239.0
-text = "You Win!"
+texture_filter = 1
+offset_left = 270.0
+offset_top = 261.0
+offset_right = 911.0
+offset_bottom = 305.0
+theme_override_fonts/font = ExtResource("3_srvhc")
+theme_override_font_sizes/font_size = 38
+text = "Mission completed: Father is founded!"
 
 [node name="Home" type="Button" parent="."]
-offset_left = 497.0
-offset_top = 456.0
-offset_right = 621.0
-offset_bottom = 499.0
+texture_filter = 1
+offset_left = 845.0
+offset_top = 347.0
+offset_right = 969.0
+offset_bottom = 390.0
+theme_override_fonts/font = ExtResource("3_srvhc")
+theme_override_font_sizes/font_size = 20
 text = "Home"
 
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_y4r17")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_iffeh")
+volume_db = -5.0
+autoplay = true
+
+[connection signal="button_down" from="Home" to="." method="_on_home_button_down"]
 [connection signal="pressed" from="Home" to="." method="_on_home_pressed"]

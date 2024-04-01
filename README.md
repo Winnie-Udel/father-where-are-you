@@ -35,6 +35,7 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 - ["The Sad Battle" by Eldritch Grim](https://opengameart.org/content/the-sad-battle)
 - ["Menu Music" by mrpoly](https://opengameart.org/content/menu-music)
 - ["Heroic Deminse [Updated Version]" by Matthew Pablo](https://opengameart.org/content/heroic-demise-updated-version)
+- ["The Fallen (RPG Orchestral Essentials) - Defeated Music" by Inspector J](https://opengameart.org/content/the-fallen-rpg-orchestral-essentials-defeated-music)
 - ["Menu Selection Click" by NenadSimic](https://opengameart.org/content/menu-selection-click)
 - ["Laser Shot" by Mobeyee Sounds](https://opengameart.org/content/laser-shot-0)
 - ["Mechanical Explosion" by Spring Spring](https://opengameart.org/content/mechanical-explosion)
