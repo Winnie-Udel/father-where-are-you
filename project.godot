@@ -41,7 +41,3 @@ attack={
 2d_physics/layer_2="enemy"
 2d_physics/layer_3="laser"
 2d_physics/layer_4="enemy laser"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"

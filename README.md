@@ -2,10 +2,6 @@
 
 Play as a member of the Xerathans, avenge your father against the human race, and find your father. 
 
-## About 
-
-## Preview 
-
 ## Instructions
 
 | Game Element                            | Description                                                               |
@@ -33,10 +29,12 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 - ["Space Shooter Art" by Kenney](https://opengameart.org/content/space-shooter-art)
 - ["Sci-Fi UI Panel" by bart](https://opengameart.org/content/sci-fi-ui-panel)
 - ["Camera Mapped Space Background" by Explosive Ninja](https://opengameart.org/content/camera-mapped-space-background)
+- ["Space Background 01" by Satur9](https://opengameart.org/content/space-background-01)
 - ["Battle in the Winter" by jobromedia](https://opengameart.org/content/battle-in-the-winter)
 - ["Through Space" by maxstack](https://opengameart.org/content/through-space)
 - ["The Sad Battle" by Eldritch Grim](https://opengameart.org/content/the-sad-battle)
 - ["Menu Music" by mrpoly](https://opengameart.org/content/menu-music)
+- ["Heroic Deminse [Updated Version]" by Matthew Pablo](https://opengameart.org/content/heroic-demise-updated-version)
 - ["Menu Selection Click" by NenadSimic](https://opengameart.org/content/menu-selection-click)
 - ["Laser Shot" by Mobeyee Sounds](https://opengameart.org/content/laser-shot-0)
 - ["Mechanical Explosion" by Spring Spring](https://opengameart.org/content/mechanical-explosion)
@@ -56,6 +54,6 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 - [X] Display Stats: *The screen will display the current score and health.* 
 - [X] Game Over: *Scene that plays after the player dies.* 
 - [ ] Story/Ending Screen: *Cutscenes.*
-- [ ] Home Screen: *Main menu screen exists.*
+- [X] Home Screen: *Main menu screen exists.*
 - [X] Instruction Screen: *Screen with player instructions.*
 

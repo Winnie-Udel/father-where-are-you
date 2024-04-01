@@ -1,14 +1,71 @@
-[gd_scene load_steps=5 format=3 uid="uid://deoxmwbxqvivv"]
+[gd_scene load_steps=9 format=3 uid="uid://deoxmwbxqvivv"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_afjbn"]
 [ext_resource type="AudioStream" uid="uid://bnsl72tedse41" path="res://audio/sound effect/Menu Selection Click.wav" id="2_aykil"]
+[ext_resource type="VideoStream" path="res://cutscenes/0001-0600.ogv" id="2_c2iv6"]
 [ext_resource type="FontFile" uid="uid://3gj20nwrx5pw" path="res://fonts/CrayonLibre.ttf" id="2_u37nc"]
+[ext_resource type="Texture2D" uid="uid://d16h2uxhfihvq" path="res://assets/backgroundSpace_01.1.png" id="3_07gyk"]
+[ext_resource type="Texture2D" uid="uid://cuuhimtiw0tn4" path="res://assets/futureui1.png" id="3_p0sti"]
 [ext_resource type="AudioStream" uid="uid://bru3qstml80be" path="res://audio/music/awesomeness.wav" id="4_vfore"]
+[ext_resource type="AudioStream" uid="uid://8uxv1psifb7q" path="res://audio/music/Heroic Demise (New).mp3" id="6_u8jm0"]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_afjbn")
 
-[node name="Play" type="Button" parent="."]
+[node name="Cutscene" type="VideoStreamPlayer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 768.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+stream = ExtResource("2_c2iv6")
+autoplay = true
+expand = true
+
+[node name="MainUI" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="MainUI"]
+texture_filter = 1
+position = Vector2(583, 348)
+scale = Vector2(1.41113, 1.12061)
+texture = ExtResource("3_07gyk")
+
+[node name="UI" type="NinePatchRect" parent="MainUI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -490.0
+offset_top = -141.5
+offset_right = 481.0
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_p0sti")
+region_rect = Rect2(4.40021, 2.00018, 2682.87, 276)
+
+[node name="Label" type="Label" parent="MainUI"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -378.5
+offset_top = -84.5
+offset_right = 378.5
+offset_bottom = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_u37nc")
+theme_override_font_sizes/font_size = 65
+text = "Father, Where Are You?"
+
+[node name="Play" type="Button" parent="MainUI"]
 texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -31,5 +88,10 @@ stream = ExtResource("2_aykil")
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_vfore")
 
-[connection signal="button_down" from="Play" to="." method="_on_play_button_down"]
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[node name="SceneMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_u8jm0")
+volume_db = -5.0
+
+[connection signal="finished" from="Cutscene" to="." method="_on_cutscene_finished"]
+[connection signal="button_down" from="MainUI/Play" to="." method="_on_play_button_down"]
+[connection signal="pressed" from="MainUI/Play" to="." method="_on_play_pressed"]
