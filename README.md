@@ -1,27 +1,31 @@
 # Father, Where Are You?
 
-Play as a member of the Xerathans, avenge your father against the human race, and find your father. 
+Play as a member of the Xerathans, avenge your father against the human race, and find your father.
+
+Entry to the GDDC 2024 Space Exploration Jam. You can play our game here: https://winnie-udel.itch.io/father-where-are-you
 
 ## Instructions
 
-| Game Element                            | Description                                                               |
-|:----------------------------------------|:--------------------------------------------------------------------------|
-| <img src="art/player/Player Fighter Jet.png" height="50"> | You are a member of the Xerathans. <br/> Use the arrow keys or W and S to move the player up and down. Use the space key to attack!               |
-| <img src="art/enemies/combined satellite.png" height="50"> | Satellite deployed by the minions of Earth! <br/> Once detected by it, it shoots lasers at a rapid pace! 
-| <img src="art/enemies/Drone Gunner.png" height="50">  | That speed is no joke. <br/> Double the laser and double the speed of the satellite! |
-| <img src="art/enemies/Drone Bomber.png" height="50">  | Slow, but dangerous! <br/> Shoots bomb that rapidly decreases your health! Destroy the bomb with your lasers! |
-| <img src="assets/SS1.png" height="80">   | Final boss! <br/> Use both laser and bomb attacks, beware!                          |
+| Game Element                                               | Description                                                                                                                         |
+| :--------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="art/player/Player Fighter Jet.png" height="50">  | You are a member of the Xerathans. <br/> Use the arrow keys or W and S to move the player up and down. Use the space key to attack! |
+| <img src="art/enemies/combined satellite.png" height="50"> | Satellite deployed by the minions of Earth! <br/> Once detected by it, it shoots lasers at a rapid pace!                            |
+| <img src="art/enemies/Drone Gunner.png" height="50">       | That speed is no joke. <br/> Double the laser and double the speed of the satellite!                                                |
+| <img src="art/enemies/Drone Bomber.png" height="50">       | Slow, but dangerous! <br/> Shoots bomb that rapidly decreases your health! Destroy the bomb with your lasers!                       |
+| <img src="assets/SS1.png" height="80">                     | Final boss! <br/> Use both laser and bomb attacks, beware!                                                                          |
 
-## Author 
-| Name                  | UD Email               |
-|:----------------------|:-----------------------|
-| Winnie Li             | winnie@udel.edu        |
-| Joshua Chelen         | jchelen@udel.edu       |
+## Author
 
-## Credits 
-- Cutscenes animated by Joshua Chelen 
-- "Player Fighter Jet" by Joshua Chelen 
-- "Satellite Base" by Joshua Chelen 
+| Name          | UD Email         |
+| :------------ | :--------------- |
+| Winnie Li     | winnie@udel.edu  |
+| Joshua Chelen | jchelen@udel.edu |
+
+## Credits
+
+- Cutscenes animated by Joshua Chelen
+- "Player Fighter Jet" by Joshua Chelen
+- "Satellite Base" by Joshua Chelen
 - "Satellite Dish" by Joshua Chelen
 - "Drone Gunner" by Joshua Chelen
 - "Drone Bomber" by Joshua Chelen
@@ -40,21 +44,19 @@ Play as a member of the Xerathans, avenge your father against the human race, an
 - ["Laser Shot" by Mobeyee Sounds](https://opengameart.org/content/laser-shot-0)
 - ["Mechanical Explosion" by Spring Spring](https://opengameart.org/content/mechanical-explosion)
 
+## Game Plan
 
-## Game Plan 
-
-- [X] Wanderer Exist: *A wanderer is on the screen.*
-- [X] Wanderer Moves: *The wanderer can move up and down with arrow keys.*
-- [X] Wanderer Attack: *The wanderer can shoot a laser with the space key.*
-- [X] Screen Limits: *The wanderer cannot be moved offscreen.*
-- [X] Spawning Enemy Satellite: *Satellite spawns randomly within given boundaries.*
-- [X] Satellite Moves: *Satellite move from right to left.*
-- [X] Enemy Drones: *Enemies that shoots laser and bomb.*
-- [X] Boss Enemy: *Spawns after a set amount of time. Shoots both lasers and bomb.*
-- [X] Wanderer Hurt: *If an enemy collides with a wanderer, it loses health.*
-- [X] Display Stats: *The screen will display the current score and health.* 
-- [X] Game Over: *Scene that plays after the player dies.* 
-- [X] Story/Ending Screen: *Cutscenes.*
-- [X] Home Screen: *Main menu screen exists.*
-- [X] Instruction Screen: *Screen with player instructions.*
-
+- [x] Wanderer Exist: _A wanderer is on the screen._
+- [x] Wanderer Moves: _The wanderer can move up and down with arrow keys._
+- [x] Wanderer Attack: _The wanderer can shoot a laser with the space key._
+- [x] Screen Limits: _The wanderer cannot be moved offscreen._
+- [x] Spawning Enemy Satellite: _Satellite spawns randomly within given boundaries._
+- [x] Satellite Moves: _Satellite move from right to left._
+- [x] Enemy Drones: _Enemies that shoots laser and bomb._
+- [x] Boss Enemy: _Spawns after a set amount of time. Shoots both lasers and bomb._
+- [x] Wanderer Hurt: _If an enemy collides with a wanderer, it loses health._
+- [x] Display Stats: _The screen will display the current score and health._
+- [x] Game Over: _Scene that plays after the player dies._
+- [x] Story/Ending Screen: _Cutscenes._
+- [x] Home Screen: _Main menu screen exists._
+- [x] Instruction Screen: _Screen with player instructions._
